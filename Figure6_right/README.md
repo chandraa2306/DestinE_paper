@@ -1,0 +1,3 @@
+This folder contains the script used to produce the scientific plot inserted in the schema proposed in Figure 6. It refers to the plot produced by the AQUA software, presented as three panels in the right side of the figure.
+One folder for each panel is here created. The nectdf produced by the AQUA diagnostics, together with the notebook used to produce the plot, are included in each folder.
+The central and bottom panels are produced with AQUA v0.13.2, while the top panel is produced with a branch starting from the same version and including the new feature used to produce the plot. The name of the branch is 'etccdi2'.
