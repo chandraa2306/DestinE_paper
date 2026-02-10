@@ -1,0 +1,4 @@
+This folder contains the script used to produce the scientific plot inserted in the schema proposed in Figure 4. It refers to the plot produced by the AQUA software, presented as three panels in the right side of the figure.
+The nectdf produced by the AQUA diagnostics, together with the notebook used to produce the plot, are included in each folder.
+The are produced with AQUA v1.0.0a2 and AQUA-diagnostics v0.22.0.
+The AQUA and AQUA-diagnostics software are public software available at the link: https://github.com/DestinE-Climate-DT/AQUA and https://github.com/DestinE-Climate-DT/AQUA-diagnostics/ respectively.
