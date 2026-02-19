@@ -1,0 +1,1 @@
+The notebook available in the main folder for Figure4 combines the work done in the AQUA and OBSALL folder, merging the two individual codes in a single matplotlib figure to keep the vectorial image and aligning the two different panels.
