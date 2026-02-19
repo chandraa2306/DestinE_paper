@@ -24,15 +24,16 @@ def plot_station_map(ax, station_stats: list[pd.DataFrame]):
     ax.set_global()
 
     # pick the bins for the colormap
-    levels = (
-        [-diff_range]
-        + list(
-            np.linspace(
-                -diff_range / 2, diff_range / 2, diff_levels + (1 - diff_levels % 2) - 2
-            )
-        )
-        + [diff_range]
-    )
+    levels = [-6.0, -3.5, -3.0, -2.5, -2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 6.0]
+    #levels = (
+    #    [-diff_range]
+    #    + list(
+    #        np.linspace(
+    #            -diff_range / 2, diff_range / 2, diff_levels + (1 - diff_levels % 2) - 2
+    #        )
+    #    )
+    #    + [diff_range]
+    #)
     cmap = plt.get_cmap("RdBu_r", len(levels) + 1)
     norm = mcolors.BoundaryNorm(boundaries=levels, ncolors=cmap.N, extend=diff_extend)
 
@@ -119,7 +120,8 @@ variable_unit = r"$\degree$C"
 plots = Path("plots")
 
 # output format
-output_format = "png"
+#output_format = "png"
+output_format = "pdf"
 
 # dict of models (model ID -> display name) to compare with the observations
 # icon-hist has wrongly encoded 2d values, so we exclude it
@@ -182,7 +184,7 @@ diff_levels=16
 #diff_levels = int(np.ceil(diff_abs / diff_mag))
 #diff_range = diff_levels * diff_mag
 
-diff_range = 7.0
+diff_range = 6.0
 #while diff_levels > 20:
 #    diff_levels //= 2
 #diff_levels = max(2, diff_levels)
@@ -263,7 +265,7 @@ cax = fig.add_subplot(gs[3])  # bottom row
 #)
 
 diff_levels=16
-levels = [-7.0, -3.5, -3.0, -2.5, -2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 7.0]
+levels = [-6.0, -3.5, -3.0, -2.5, -2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 6.0]
 #print(diff_levels)
 #print(levels)
 cmap = plt.get_cmap("RdBu_r", len(levels) + 1)
@@ -288,11 +290,13 @@ for boundary in levels:
 # Make the colorbar shorter than the panel width (optional fine-tuning)
 # This centers a shortened bar; adjust 0.2 and 0.6 as needed
 pos = cax.get_position()
-cax.set_position([0.24, pos.y0, 0.51, pos.height])
+cax.set_position([0.2, pos.y0, 0.6, pos.height])
+#cax.set_position([0.24, pos.y0, 0.51, pos.height])
 
 plt.tight_layout()
 # No horizontal space between subplots in a single-column layout needed
 # plt.subplots_adjust(wspace=-0.2)  # optional to remove or keep without effect
 
-plt.savefig(plots / f"map-mean-o25_1{variable}.{output_format}", dpi=300)
+#plt.savefig(plots / f"map-mean-o25_1{variable}.{output_format}", dpi=300)
+plt.savefig(plots / f"map-mean-o25_1{variable}.{output_format}")
 plt.show()
