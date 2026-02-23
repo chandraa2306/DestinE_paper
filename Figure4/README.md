@@ -1,1 +1,2 @@
 The notebook available in the main folder for Figure4 combines the work done in the AQUA and OBSALL folder, merging the two individual codes in a single matplotlib figure to keep the vectorial image and aligning the two different panels.
+It will be enough to run the notebook to produce the final figure. A README file in the AQUA and OBSALL folders is available to provide more details on the single scripts and data used to produce the two panels and the necessary data to run the scripts.
