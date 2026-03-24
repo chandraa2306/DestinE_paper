@@ -1,0 +1,27 @@
+{
+    "creators": [
+      {
+        "affiliation": "Politecnico di Torino, Italy",
+        "name": "Nurisso, Matteo",
+        "orcid": "0000-0002-5962-0680"
+      },
+      {
+        "affiliation": "Helmholtz Centre for Environmental Research, Germany",
+        "name": "Chandrasekar, Aparna",
+        "orcid": "0000-0003-3806-3106"
+      },
+      {
+        "affiliation": "Max-Planck-Institut für Meteorologie, Germany",
+        "name": "Klocke, Daniel",
+        "orcid": "0000-0001-7405-013X"
+      },
+      {
+        "affiliation": "Barcelona Supercomputing Center, Spain",
+        "name": "Lacima-Nadolnik, Aleksander",
+        "orcid": "0000-0002-1826-769X"
+      }
+    ],
+    "description": "DestinE Paper images repository",
+    "license": "CC0-1.0",
+    "title": "DestinE Paper"
+  }
